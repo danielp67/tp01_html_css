@@ -1,0 +1,83 @@
+@font-face
+{
+    font-family: 'Caladea';
+    @import url('https://fonts.googleapis.com/css2?family=Caladea:wght@700&display=swap');
+}
+
+
+@font-face
+{
+    font-family: 'Aileron';
+    src: url('../font/Aileron-Regular.otf') format('truetype');
+}
+
+
+
+
+header
+{
+    margin-top: 5%;
+    right: 3%;
+    height:300px;
+    width : 90px;
+    position: fixed;
+    z-index: 10;
+   
+}
+
+
+nav ul
+{  
+    list-style-type: none; 
+    width: 100%;
+    
+}
+
+nav li
+{
+    width: 100%;
+    
+}
+
+#navigation span
+{
+  display: block;
+  width: 30px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: rgb(110, 110, 110);
+  z-index: 1;
+}
+
+
+nav a
+{
+    margin-top: 18px;
+    height:30px;
+    width: 30px;
+    display: block;
+}
+
+
+nav a img
+{
+   
+    width: 18px;
+    height: 18px;
+    filter: contrast(20%);
+    -webkit-filter: contrast(20%);
+    margin: auto;
+    display: block;
+    
+}
+
+
+
+nav a:hover
+{
+    filter: contrast(400%);
+    -webkit-filter: contrast(400%);
+}
+
+
