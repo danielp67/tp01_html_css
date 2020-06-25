@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TP02_HTLM+Css</title>
-    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""/>
     <link rel="stylesheet" href="assets/css/style.css" />
-    <script src="https://use.fontawesome.com/6a6ac5c924.js"></script>
-    <!--Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>-->
     
 </head>
 
@@ -20,11 +20,23 @@
             <img src="assets/img/logo.png" alt="logo olive" class="logo" >
 
             <nav>
-                <ul>
-                    
-                    <li><a href="navigation" id="navigation"><span></span>
-                            <span></span>
-                            <span></span></a></li>
+
+                <a href="navigation" id="navigation">
+                    <div id="menu_burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    </div>
+                </a>
+
+                    <ul class="nav_sm_screen">
+                        <li><a href="home">Home</a></li>
+                        <li><a href="about">About</a></li>
+                        <li><a href="order">Order</a></li>
+                        <li><a href="contact us">Contact Us</a></li>
+                    </ul>
+                
+                <ul class="nav_big_screen">
                     <li><a href="home">Home</a></li>
                     <li><a href="about">About</a></li>
                     <li><a href="order">Order</a></li>
@@ -51,18 +63,23 @@
 
             <!--Page 2-->
             <div class="page2">
-                <div class="imgpage2"></div>
-                <h2>About Us</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                <div class="imgpage2">
+                    <div class="textpage2">
+                        <h2>About Us</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                    </div>
+                </div>    
             </div>
 
 
             <!--Page 3-->
             <div class="page3">
-                <img src="assets/img/pasta_zoom_page3.jpg" alt="pasta zoom" class="photop3" >
-                <h4>About Us</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
-                <button id="contact">Contact Us!</button>
+                <img src="assets/img/pasta_zoom_page3.jpg" alt="pasta zoom" class="photopage3" >
+                <div class="textpage3">
+                    <h4>We would love to know what you think</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+                    <button id="contact">Contact Us!</button>
+                </div>
             </div>
 
 
@@ -70,20 +87,22 @@
             <div class="page4">
                 <h3>Our golden dishes</h3>
                 <ul class="menu_page4">
-                    <li><img src="assets/img/pasta1_page4.jpg" alt="pasta" class="photo1 page4" >Spaguetti a la italiana</li>
+                    <li><img src="assets/img/pasta1_page4.jpg" alt="pasta" class="photo1 page4" ><br>Spaguetti a la italiana</li>
 
-                    <li><img src="assets/img/orange_mousse2_page4.jpg" alt="orange mousse" class="photo2 page4" >Orange Mousse</li>
+                    <li><img src="assets/img/orange_mousse2_page4.jpg" alt="orange mousse" class="photo2 page4" ><br>Orange Mousse</li>
 
-                    <li><img src="assets/img/lasagna3_page4.jpg" alt="pasta" class="photo3 page4" >Our Nonna's Lasagna</li>
+                    <li><img src="assets/img/lasagna3_page4.jpg" alt="pasta" class="photo3 page4" ><br>Our Nonna's Lasagna</li>
                 </ul>
             </div>
 
 
             <!--Page 5-->
             <div class="page5">
-                <h2>First time here?</h2>
-                <p>Click here to get your discount code</p>
-                <p>$100</p>
+                <div class="textpage5">
+                    <h2>First time here?</h2>
+                    <p>Click here to get your discount code</p>
+                    <p class="coupon">$100</p>
+                </div>
             </div>
 
 
@@ -95,23 +114,28 @@
 
             <!--Page 7-->
             <div class="page7">
-                <quote>"what is done in love is well done"</quote>
-                <p>Vincent Van Gogh</p>
+                <blockquote>"what is done in love is well done"<br>
+                    Vincent Van Gogh</blockquote>
             </div>
 
 
             <!--Page 8-->
             <div class="page8">
-                <h5>Find us at</h5>
-            <p>101 ST, Buenos Aires</p>
-            <p>Opening hours: 9:00 - 00:00</p>
+                <div id="mapid">
+                    <div class="textpage8">
+                        
+                        <h5>Find us at</h5>
+                        <p>101 ST, Buenos Aires</p>
+                        <p>Opening hours: 9:00 - 00:00</p>
+                    </div>
+                </div>
             </div>
 
 
         </section>
 
    
-
+         <!--Footer-->
         <footer>
 
             <div class="foot_top"></div>
@@ -124,25 +148,26 @@
                 </div>
 
                 <div class="foot_text2">
-                    <h6>About</h6>
-                    <ul>
-                        <li><a href="">Team</a></li>
-                        <li><a href="">Join us</a></li>
-                        <li><a href="">Ethic</a></li>
-                        <li><a href="">Goals</a></li>
-                    </ul>
-                </div>
+                    <div class="foot_text3">
+                        <h6>About</h6>
+                        <ul>
+                            <li><a href="">Team</a></li>
+                            <li><a href="">Join us</a></li>
+                            <li><a href="">Ethic</a></li>
+                            <li><a href="">Goals</a></li>
+                        </ul>
+                    </div>
 
-                <div class="foot_text3">
-                    <h6>About</h6>
-                    <ul>
-                        <li><a href="">Team</a></li>
-                        <li><a href="">Join us</a></li>
-                        <li><a href="">Ethic</a></li>
-                        <li><a href="">Goals</a></li>
-                    </ul>
+                    <div class="foot_text3">
+                        <h6>About</h6>
+                        <ul>
+                            <li><a href="">Team</a></li>
+                            <li><a href="">Join us</a></li>
+                            <li><a href="">Ethic</a></li>
+                            <li><a href="">Goals</a></li>
+                        </ul>
+                    </div>
                 </div>
-
             </div>
 
             <div>
@@ -165,6 +190,10 @@
 
         </footer>
  
+        <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
+        <script src="assets/js/index.js"></script>
 
     </body>
 

@@ -22,34 +22,46 @@ body{
 
 }
 
+*, *::before,*::after{
+    box-sizing: border-box;
+}
+
+
+
 header{
     position: fixed;
     width: 100%;
     top: 0px;
-    height: 80px;
+    height: 17%;
     z-index: 10;
     background-color:rgb(115,108,77);
     display: flex;
-   
+    justify-content: space-between;
 }
+
 
 nav{
     width: 50%;
-    margin: auto 5% auto 10%;
+    margin: auto 5% auto 5%;
     background-color: tomato;
 }
 
 .logo{
     
-    height: 100px;
-    margin-left: 60px;
+    width: 300px;
+    height: 250px;   
+    margin-left: 5%;
+    margin-top: -70px;
+    background-color: tomato;
 }
 
 ul
 {  
     list-style-type: none;
     padding-inline-start: 0px;
+    
 }
+
 
 
 a{
@@ -58,29 +70,65 @@ a{
     transition: 0.3s;
 }
 
+
 a:hover
 {
     color: white;
 }
 
 
-nav ul
+.nav_big_screen
 {  
     display: flex;
-    flex:space-evenly center;
+    justify-content: space-between;
     background-color: rgb(105, 66, 209);
+    font-size: 2rem;
 }
 
 
-#navigation span
+.nav_sm_screen
+{  
+    display: none;
+}
+
+
+
+
+@media all and (max-width: 1024px){
+
+
+#navigation{
+float: right;
+margin-top: 30px;
+display: block;
+}
+
+
+#menu_burger span
 {
-  display: block hidden;
+  display: block;
   width: 30px;
   height: 4px;
   margin-bottom: 5px;
   position: relative;
   background: rgb(110, 110, 110);
   z-index: 1;
+}
+
+
+
+#navigation:hover
+{
+    filter: contrast(400%);
+    -webkit-filter: contrast(400%);
+}
+
+
+.nav_big_screen
+{  
+    display: none;
+}
+
 
 }
 
@@ -104,20 +152,33 @@ nav ul
     margin-top: 300px;
     margin-left: 50px;
     margin-right: 50px;
+    padding-bottom: 5%;
+    width: 90%;
     display: flex;
-    flex: space-between;
+    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color:cornflowerblue;
 }
 
 h1{
-    font-size: 10rem;
+    font-size: 5rem;
     background-color: teal;
+    width: 50vw;
+    height: 25vh;
+    text-align: left;
 }
 
+
+
 #book{
+    margin-top: 7%;
+    margin-bottom: 7%;
     width: 218px;
     height: 82px;
     color: white;
+    font-size: 2rem;
     background-color: rgb(191, 150, 75);
     transition: 0.3s;
     -webkit-transition: 0.3s;
@@ -140,22 +201,30 @@ h1{
 
 .page2
 { 
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
     z-index: 1;
 }
 
 .imgpage2
 {
-    
-    background: url('../img/bg_all.png') no-repeat -500px -100px;
-    height: 100vh; 
-    z-index: 10;
-    
+    background: url('../img/bg_all.png') no-repeat -500px -50px;
+    background-size: cover;
+    height: 50%; 
+    z-index: 10;    
 }
 
 .textpage2
 {
-
+    text-align: center;
+    background-color: teal;
+    margin: auto;
+    width: 45%;
+    padding-top: 15%;
+    margin-left: 35%;
+    text-align: justify;
+    font-size: 2rem;
+    z-index: 100;
 }
 
 
@@ -164,13 +233,41 @@ h1{
     height: 100%;
     background-color:rgb(115,108,77);
     z-index: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
+
+.photopage3{
+    width: 50%;
+    padding-left: 6%;
+    padding-right: 3%;
+    padding-top: 17%;
+    padding-bottom: 17%;
+
+}
+
+.textpage3{
+    width: 40%;
+    font-size: 2rem;
+    background-color: teal;
+    margin-right: 10%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.textpage3 h4{
+   
+    font-size: 4rem;
+    
+}
 
 #contact{
     width: 210px;
     height: 86px;
     color: white;
+    font-size: 2rem;
     background-color: rgb(191, 150, 75);
     transition: 0.3s;
     -webkit-transition: 0.3s;
@@ -193,17 +290,107 @@ h1{
 
 
 
+
+
+.page4 h3{
+    text-align: center;
+    font-size: 4rem;
+    margin-top: 10%;
+    background-color: teal;
+}
+
+
 .menu_page4{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+    font-size: 2rem;
+
 }
 
+
+.page5{
+    min-height: 100vh;
+    height: 100%; 
+}
+
+
+.textpage5{
+    width: 45%;
+    font-size: 2rem;
+    background-color: teal;
+    margin-left: 10%;
+    margin-top: 25%;
+    margin-bottom: 25%;
+    text-align: center;
+}
+
+
+.textpage5 h2{
+    font-size: 6rem;
+}
+
+.textpage5 p{
+    text-transform: uppercase;
+}
+
+.coupon{
+    background-color: white;
+    color:rgb(115,108,77);
+    font-size: 7rem;
+    font-weight: bold;
+    margin: auto;
+    height: 20vh;
+    width: 40vw;
+   
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
 .page6{
     background: url('../img/pasta_panorama_page6.png') no-repeat center center;
     height: 100vh; 
     z-index: 10; 
 }
+
+
+.page7{
+    min-height: 100vh;
+    
+}
+
+blockquote{
+    text-align: center;
+    font-size:5rem;
+    line-height: 10rem;
+    margin-top: 20%;
+    background-color: teal;
+}
+
+.page8{
+    min-height: 100vh; 
+    background-color:rgb(115,108,77);
+}
+
+#mapid {
+    height: 500px;
+    width: 200px;
+    
+}
+
+.textpage8{
+    min-height: 100vh; 
+    background-color:rgb(115,108,77);
+}
+
 
 footer{
 min-height: 100vh;
@@ -222,9 +409,12 @@ z-index: 1;
 
 
 .foot_text{
-    margin: 10% 9% auto 9%;
+    margin: 10% auto auto auto;
+    width: 90%;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     font-size:2rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: teal;
@@ -236,23 +426,41 @@ z-index: 1;
 }
 
 .foot_text1{
-    width:80%;
-    padding-right: 20%;
+    flex: 50%;
+    background-color:blue;
+    
+    
 }
 
-.foot_text2 h6, .foot_text3 h6 {
+.foot_text2{
+    flex: 15%;
+    font-size:2rem;
+    text-transform: uppercase;
+    background-color:rgb(100, 185, 93);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.foot_text2 h6{
     font-size:2rem;
     text-transform: uppercase;
 }
 
+.foot_text3{
+   padding-left: 5%;
+   background-color:rgb(219, 159, 47);
+}
 
 
 .reseaux_sociaux{
-    margin: 5% 35% 5% 35%;
+    margin: 5% auto 5% auto;
+    width: 350px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
+   
     
 }
 
