@@ -13,7 +13,7 @@
 
 html, body{
     margin: 0px;
-    
+    font-size: 100%;
 }
 
 body{
@@ -32,34 +32,39 @@ header{
     position: fixed;
     width: 100%;
     top: 0px;
-    height: 17%;
+    height: 12%;
+    min-height: 50px;
     z-index: 10;
     background-color:rgb(115,108,77);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
 }
 
 
 nav{
-    width: 50%;
-    margin: auto 5% auto 5%;
-    background-color: tomato;
+    width: 55%;
+    margin-right: 5%;
+    height:100%;
+    display: table-cell;
+    vertical-align: middle;
 }
 
-.logo{
-    
+.logo{   
     width: 300px;
     height: 250px;   
     margin-left: 5%;
     margin-top: -70px;
-    background-color: tomato;
+    background-color: tomato; 
 }
 
 ul
 {  
     list-style-type: none;
     padding-inline-start: 0px;
-    
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
 
 
@@ -81,8 +86,10 @@ a:hover
 {  
     display: flex;
     justify-content: space-between;
-    background-color: rgb(105, 66, 209);
-    font-size: 2rem;
+    align-items: center;
+    
+    font-size: 2.5rem;
+    height: 100%;
 }
 
 
@@ -99,7 +106,8 @@ a:hover
 
 #navigation{
 float: right;
-margin-top: 30px;
+margin-top: 4vh;
+
 display: block;
 }
 
@@ -132,7 +140,15 @@ display: block;
 
 }
 
- 
+
+/*
+@media all and (max-width: 1024px) {
+  html{
+    font-size: 50%;  
+  }
+
+}
+*/
 
 .page1
 {
@@ -149,32 +165,37 @@ display: block;
 
 .textpage1
 {
-    margin-top: 300px;
-    margin-left: 50px;
-    margin-right: 50px;
-    padding-bottom: 5%;
+    margin-top: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10%;
     width: 90%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-end;
-    background-color:cornflowerblue;
+    background-color: seagreen;
+    
 }
 
 h1{
-    font-size: 5rem;
-    background-color: teal;
-    width: 50vw;
-    height: 25vh;
+    font-size: 6rem;
+    width: 60vw;
+    height: 40vh;
     text-align: left;
+
+    
+}
+
+h1 span{
+    font-size: 8rem;
 }
 
 
-
 #book{
-    margin-top: 7%;
-    margin-bottom: 7%;
+    
+    margin-bottom: 10%;
     width: 218px;
     height: 82px;
     color: white;
@@ -204,29 +225,40 @@ h1{
     min-height: 100vh;
     height: 100%;
     z-index: 1;
+    text-align:center; 
 }
 
 .imgpage2
 {
-    background: url('../img/bg_all.png') no-repeat -500px -50px;
-    background-size: cover;
-    height: 50%; 
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background: url('../img/bg_all.png') no-repeat -300px;
+    background-size: contain;
+    height: 100vh;
+
     z-index: 10;    
 }
 
 .textpage2
 {
-    text-align: center;
-    background-color: teal;
-    margin: auto;
+    text-align: center;  
     width: 45%;
-    padding-top: 15%;
-    margin-left: 35%;
+    height: 50vh;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 15%;
     text-align: justify;
     font-size: 2rem;
     z-index: 100;
+    display:inline-block;
+    vertical-align:middle;
+  
 }
 
+.textpage2 h2
+{
+ font-size: 6rem; 
+}
 
 .page3{ 
     min-height: 100vh;
@@ -357,7 +389,11 @@ h1{
 }
 .page6{
     background: url('../img/pasta_panorama_page6.png') no-repeat center center;
-    height: 100vh; 
+    
+    background-size: contain;
+    min-height: 100vh;
+    height: 100%;
+    width: 100%; 
     z-index: 10; 
 }
 
@@ -381,14 +417,17 @@ blockquote{
 }
 
 #mapid {
-    height: 500px;
-    width: 200px;
+    height: 80%;
+    width: 100%;
+    
     
 }
 
 .textpage8{
     min-height: 100vh; 
-    background-color:rgb(115,108,77);
+    width: 50%;
+    background-color:rgba(0, 0, 0, 0.5);
+    z-index: 100;
 }
 
 
