@@ -368,7 +368,7 @@ h1 span{
 .textpage3{
     min-width: 300px;
     width: 40%;
-    margin-left: 1rem;
+    margin-left: 5%;
     font-size: 2rem;
     margin-right: 5%;
     display:flex;
@@ -541,6 +541,7 @@ blockquote{
     height: 100%;
     background-color:rgb(115,108,77);
     position: relative;
+    
 }
 
 #mapid {
@@ -678,13 +679,12 @@ footer h6{
 
 
 .reseaux_sociaux{
-    margin: 5% auto 5% auto;
+    margin-top: 20%;
     width: 300px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
-   
     
 }
 
