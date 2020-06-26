@@ -362,6 +362,9 @@ h1 span{
     flex:40%;
 }
 
+
+
+
 .textpage3{
     min-width: 300px;
     width: 40%;
@@ -547,6 +550,9 @@ blockquote{
     z-index: 1;
 }
 
+
+@media all and (min-width: 800px){
+
 #overlay{
 
     height: 100%; 
@@ -563,11 +569,47 @@ blockquote{
    justify-content: center;
 }
 
+
 .textpage8 h5{
     font-size: 6rem;
     margin-bottom: 3rem;
     text-transform: uppercase;
 }
+
+
+
+}
+
+
+@media all and (max-width: 800px){
+
+    #overlay{
+    
+        height: 30%; 
+        width: 100%;
+        background-color:rgba(0, 0, 0, 0.5);
+        z-index: 10;
+        font-size: 3rem;
+        top:0%;
+        position: absolute;
+        font-family: 'Avenirlts';
+        display:flex;
+        text-align: center;
+        align-items: center;
+       justify-content: center;
+    }
+
+
+
+    .textpage8 h5{
+        font-size: 4rem;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+    }
+
+    }
+
+
 
 
 

@@ -1,5 +1,18 @@
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Récupération des blocs
 let mainMenu = document.querySelector("#nav_menu");
 let burgerMenu = document.querySelector("#menu_burger");
@@ -37,7 +50,7 @@ burgerMenu.addEventListener(clickedEvent, function(evt) {
 
 //Map integration
 
-let map = L.map('mapid').setView([47.752727, 7.276758], 13);
+let map = L.map('mapid').setView([47.762727, 7.289758], 13);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?{foo}', {foo: 'bar', attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
 maxZoom: 18,
 id: 'mapbox/streets-v11',

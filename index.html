@@ -51,42 +51,44 @@
 
 
     
-        <section>
+        <main>
 
             <!--Page 1-->
-            <div class="page1">
+            <section class="page1">
                 <div class="textpage1">
                     <h1>The <span class="title1">Italian<br>Restaurant</span></h1>
 
                     <button id="book">Book Now</button>
                 </div>
-            </div>
+            </section>
 
 
             <!--Page 2-->
-            <div class="page2">
+            <section class="page2">
                 <div class="imgpage2">
                     <div class="textpage2">
                         <h2>About Us</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
                     </div>
                 </div>    
-            </div>
+            </section>
 
 
             <!--Page 3-->
-            <div class="page3">
+            <section class="page3">
+                
                 <img src="assets/img/pasta_zoom_page3.jpg" alt="pasta zoom" class="photopage3" >
+                
                 <div class="textpage3">
                     <h4>We would love to know what you think</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
                     <button id="contact">Contact Us!</button>
                 </div>
-            </div>
+            </section>
 
 
             <!--Page 4-->
-            <div class="page4">
+            <section class="page4">
                 <h3>Our golden dishes</h3>
                 <ul class="menu_page4">
                     <li><img src="assets/img/pasta1_page4.jpg" alt="pasta" class="photo1 page4" ><br>Spaguetti a la italiana</li>
@@ -95,11 +97,11 @@
 
                     <li><img src="assets/img/lasagna3_page4.jpg" alt="pasta" class="photo3 page4" ><br>Our Nonna's Lasagna</li>
                 </ul>
-            </div>
+            </section>
 
 
             <!--Page 5-->
-            <div class="page5">
+            <section class="page5">
                 <div class="imgpage5">
                     <div class="textpage5">
                         <h2>First time here?</h2>
@@ -107,7 +109,7 @@
                         <button class="coupon">$100</button>
                     </div>
                 </div>
-            </div>
+            </section>
 
 
             <!--Page 6-->
@@ -124,7 +126,7 @@
 
 
             <!--Page 8-->
-            <div class="page8">
+            <section class="page8">
                 <div id="mapid">
                 </div>
                 
@@ -135,10 +137,10 @@
                             Opening hours:<br>9:00 - 00:00</p>
                         </div>
                 </div>
-            </div>
+            </section>
 
 
-        </section>
+        </main>
 
    
          <!--Footer-->
@@ -198,6 +200,33 @@
  
         
         <script type="text/javascript" src="assets/js/index.js"></script>
+
+
+        <script>
+            // ... code from above...
+            const factor =
+              (scrollerHeight - thumbHeight)/(scroller.scrollHeight - scrollerHeight);
+            thumb.style.transform = `
+              matrix3d(
+                1, 0, 0, 0,
+                0, 1, 0, 0,
+                0, 0, 1, 0,
+                0, 0, 0, -1
+              )
+              scale(${1/factor})
+              translateZ(${1 - 1/factor}px)
+              translateZ(-2px)
+            `;
+          </script>
+
+
+
+
+
+
+
+
+
 
     </body>
 
