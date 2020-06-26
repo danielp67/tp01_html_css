@@ -1,19 +1,20 @@
 @font-face
 {
-    font-family: 'Caladea';
-    @import url('https://fonts.googleapis.com/css2?family=Caladea:wght@700&display=swap');
+    font-family: 'Avenirlts';
+    src: url('../font/FontsFree-Net-AvenirLTStd-Book.ttf') format('truetype');
 }
 
 
 @font-face
 {
-    font-family: 'Aileron';
-    src: url('../font/Aileron-Regular.otf') format('truetype');
+    font-family: 'Anticdidone';
+    src: url('../font/AnticDidone-Regular.ttf') format('truetype');
 }
 
 html, body{
     margin: 0px;
     font-size: 100%;
+    font-family: 'Avenirlts';
 }
 
 body{
@@ -30,6 +31,11 @@ body{
     margin-inline-end: 0px;
 }
 
+
+h1, h2, h3, h4{
+    font-family: 'Anticdidone';
+    font-weight: lighter;
+}
 
 
 header{
@@ -49,16 +55,21 @@ nav{
     width: 55%;
     margin-right: 5%;
     height:100%;
-    display: table-cell;
-    vertical-align: middle;
+    display: flex;
+    align-items: center; 
+}
+
+#nav_menu {
+    width: 100%; 
 }
 
 .logo{   
-    width: 250px;
-    height: 230px;   
+    width: 15%;
+    min-width: 250px;
     margin-left: 5%;
-    margin-top: -80px;
-    background-color: tomato; 
+    padding-top: 5px;
+    padding-bottom: 5px;
+    object-fit: contain;
 }
 
 ul
@@ -82,26 +93,25 @@ a:hover
     color: white;
 }
 
-@media all and (min-width: 1024px){
+@media all and (min-width: 800px){
 .nav_big_screen
 {  
     display: flex;
-    justify-content: space-between;
-    align-items: center; 
+    justify-content: space-between; 
     font-size: 2.5rem;
-    height: 100%;
 }
 }
 
 
 
-@media all and (max-width: 1024px){
+@media all and (max-width: 800px){
 
 
 #navigation{
 float: right;
-margin-top: 4vh;
-
+top:5%;
+right:5%;
+position: fixed;
 display: block;
 }
 
@@ -134,31 +144,23 @@ display: block;
 #nav_menu {
     position:fixed; 
     z-index:10; 
-    right:-25%; 
-    top:12%; 
+    right:-50%; 
+    top:20%; 
     background:rgb(115,108,77); 
-    width:25%; 
+    width:50%;
+    font-size: 4rem;
 }
 
 
 
 #nav_menu ul li a {
     display:block; 
-    color:#fff; 
-    text-decoration:none; 
-    font-weight:700; 
-    background:#2c3e50; 
-    transition:background .5s; 
     padding:1rem; 
     text-align:center; 
     margin-top:10px; 
-    box-shadow:1px 1px 0 #666;
+
 }
 
-#nav_menu ul li a:hover {
-    background:#f1c40f; 
-    transition:background .5s;
-}
 
 #nav_menu.visible {
     animation:.5s slideLeft ease-in forwards;
@@ -174,18 +176,18 @@ display: block;
 /* Animations pour le menu slide */
 @keyframes slideRight {
 	from {right:0%;}
-	to {right:-25%;}
+	to {right:-50%;}
 }
 @-webkit-keyframes slideRight {
 	from {right:0%;}
-	to {right:-25%;}
+	to {right:-50%;}
 }
 @keyframes slideLeft {
-	from {right:-25%;}
+	from {right:-50%;}
 	to {right:0%;}
 }
 @-webkit-keyframes slideLeft {
-	from {right:-25%;}
+	from {right:-50%;}
 	to {right:0%;}
 }
 
@@ -204,14 +206,25 @@ display: block;
 }
 
 
-/*
+
 @media all and (max-width: 1024px) {
   html{
-    font-size: 50%;  
+    font-size: 80%;  
   }
 
 }
-*/
+
+
+@media all and (max-width: 800px) {
+    html{
+      font-size: 50%;  
+    }
+  
+  }
+
+
+
+
 
 .page1
 {
@@ -229,7 +242,7 @@ display: block;
 
 .textpage1
 {
-   
+    margin-top: 30%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10%;
@@ -237,32 +250,29 @@ display: block;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-end;
-    background-color: seagreen;
-    
+    justify-content: space-around;
+    align-items: flex-end;  
 }
 
 h1{
     font-size: 6rem;
-    width: 60vw;
-    
+    min-width: 300px;
     text-align: left;
-    background-color: rgb(57, 63, 139);
-
-    
 }
 
 h1 span{
-    font-size: 8rem;
+    font-size: 9rem;
 }
 
 
 #book{
+    margin-bottom: 2rem;
+    margin-left: 2rem;
     width: 218px;
     height: 82px;
     color: white;
     font-size: 2rem;
+    font-family: 'Avenirlts';
     background-color: rgb(191, 150, 75);
     transition: 0.3s;
     -webkit-transition: 0.3s;
@@ -296,27 +306,28 @@ h1 span{
 {
     margin-top: 5%;
     margin-bottom: 5%;
-    background: url('../img/bg_allp2.png') no-repeat -300px;
+    background: url('../img/bg_allp2.png') no-repeat -250px;
     background-size: contain;
     height: 100vh;
        
 }
 
 .textpage2
-{
+{   
+    font-family: 'Avenirlts';
     text-align: center;
     width: 45%;
     height: 50vh;
     text-align: justify;
     font-size: 2rem;
     position: absolute;
+    left:70%;
     top:60%;
-    left:60%;
-    transform: translate(-60%,-60%);
-    -webkit-transform: translate(-60%,-60%);
-    -moz-transform: translate(-60%,-60%);
-    -ms-transform: translate(-60%,-60%);
-    -o-transform: translate(-60%,-60%);
+    transform: translate(-70%,-60%);
+    -webkit-transform: translate(-70%,-60%);
+    -moz-transform: translate(-70%,-60%);
+    -ms-transform: translate(-70%,-60%);
+    -o-transform: translate(-70%,-60%);
 }
 
 
@@ -334,35 +345,45 @@ h1 span{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    flex: space-around;
+    align-items: center;
+    
 }
 
 
 .photopage3{
-    width: 50%;
-    
+    min-width: 300px;
+    max-width: 1200px;
+    object-fit: contain;
     padding-left: 6%;
     padding-right: 3%;
     padding-top: 17%;
     padding-bottom: 17%;
-
+    flex:40%;
 }
 
 .textpage3{
+    min-width: 300px;
     width: 40%;
+    margin-left: 1rem;
     font-size: 2rem;
-    background-color: teal;
-    margin-right: 10%;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin-right: 5%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex:40%;
 }
 
 .textpage3 h4{
-   
-    font-size: 4rem;
-    
+    font-size: 4rem; 
+    margin-bottom: 3rem;
 }
 
+
+
 #contact{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
     width: 210px;
     height: 86px;
     color: white;
@@ -394,7 +415,7 @@ h1 span{
 
 .page4 h3{
     text-align: center;
-    font-size: 4rem;
+    font-size: 5rem;
     margin-top: 10%;
 }
 
@@ -469,6 +490,8 @@ h1 span{
     margin-top: 10%;
     height: 20vh;
     width: 40vw;
+    min-height: 100px;
+    min-width:150px;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -490,34 +513,60 @@ h1 span{
 
 .page7{
     min-height: 100vh;
-    
+    height: 100%;
+    position: relative;
+   
 }
 
 blockquote{
     text-align: center;
     font-size:5rem;
     line-height: 10rem;
-    margin-top: 20%;
-    background-color: teal;
+    left:50%;
+    top:50%;
+    width: 80%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    position: absolute;
 }
 
 .page8{
-    min-height: 100vh; 
+   
+    height: 100%;
     background-color:rgb(115,108,77);
+    position: relative;
 }
 
 #mapid {
-    height: 80%;
+    min-height: 800px;
+    height: 100%;
     width: 100%;
     z-index: 1;
-    
 }
 
 #overlay{
-    min-height: 100vh; 
-    width: 50%;
+
+    height: 100%; 
+    width: 40%;
     background-color:rgba(0, 0, 0, 0.5);
-    z-index: 100;
+    z-index: 10;
+    font-size: 3rem;
+    top:0%;
+    position: absolute;
+    font-family: 'Avenirlts';
+    display:flex;
+    text-align: center;
+    align-items: center;
+   justify-content: center;
+}
+
+.textpage8 h5{
+    font-size: 6rem;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
 }
 
 
@@ -527,6 +576,7 @@ footer{
 min-height: 100vh;
 height: 100%;
 z-index: 1;
+position :relative;
 }
 
 
@@ -535,12 +585,19 @@ z-index: 1;
     top:0px;
     background-color:rgb(115,108,77);
     height: 120px;
+    position: absolute;
 }
 
 
 
 .foot_text{
-    margin: 10% auto auto auto;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
     width: 90%;
     display: flex;
     flex-direction: row;
@@ -548,6 +605,7 @@ z-index: 1;
     justify-content: center;
     font-size:2rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
 }
 
 
@@ -579,7 +637,7 @@ footer h6{
 
 .reseaux_sociaux{
     margin: 5% auto 5% auto;
-    width: 350px;
+    width: 300px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -616,4 +674,5 @@ footer h6{
     bottom:0px;
     background-color:rgb(115,108,77);
     height: 120px;
+    position: absolute;
 }
