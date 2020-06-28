@@ -139,10 +139,10 @@
                 </div>
             </section>
 
-
         </main>
 
-   
+
+        
          <!--Footer-->
         <footer>
 
@@ -200,31 +200,6 @@
  
         
         <script type="text/javascript" src="assets/js/index.js"></script>
-
-
-        <script>
-            // ... code from above...
-            const factor =
-              (scrollerHeight - thumbHeight)/(scroller.scrollHeight - scrollerHeight);
-            thumb.style.transform = `
-              matrix3d(
-                1, 0, 0, 0,
-                0, 1, 0, 0,
-                0, 0, 1, 0,
-                0, 0, 0, -1
-              )
-              scale(${1/factor})
-              translateZ(${1 - 1/factor}px)
-              translateZ(-2px)
-            `;
-          </script>
-
-
-
-
-
-
-
 
 
 

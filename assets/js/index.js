@@ -1,18 +1,5 @@
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Récupération des blocs
 let mainMenu = document.querySelector("#nav_menu");
 let burgerMenu = document.querySelector("#menu_burger");
@@ -36,8 +23,7 @@ burgerMenu.addEventListener(clickedEvent, function(evt) {
 	} else {
 		this.removeAttribute("class");
 	}
-	// Variante avec x.classList (ou DOMTokenList), pas 100% compatible avant IE 11...
-	// burgerMenu.classList.toggle("clicked");
+
 
 	// Créé l'effet pour le menu slide (compatible partout)
 	if(mainMenu.getAttribute("class") != "visible") {
@@ -63,78 +49,3 @@ accessToken: 'your.mapbox.access.token'
 //Map marker
 
 L.marker([47.752727, 7.316758]).addTo(map);
-
-/*
-//Map overflow
-L.Control.textbox = L.Control.extend({
-    onAdd: function(map) {
-        
-    var text = L.DomUtil.create('div');
-    text.id = "info_text";
-    text.innerHTML = "<strong>text here</strong>"
-    return text;
-    },
-
-    onRemove: function(map) {
-        // Nothing to do here
-    }
-});
-L.control.textbox = function(opts) { return new L.Control.textbox(opts);}
-L.control.textbox({ position: 'bottomleft' }).addTo(map);
-/*
-map.on('move', repositionMask) ;
-
-map.fire('move');
-
-
-function repositionMask() {
-    var po = map.getPixelOrigin(),
-        pb = map.getPixelBounds(),
-        offset = map.getPixelOrigin().subtract(map.getPixelBounds().min);
-
-    $(layer02._container).css({
-        clip: 'rect(' + (overlay.top - offset.y) + 'px,' + (overlay.left + overlay.width - offset.x) + 'px,' + (overlay.top + overlay.height - offset.y) + 'px,' + (overlay.left - offset.x) + 'px)'
-    });
-}
-
-
-
-const overlay = document.getElementById("overlay");
-let imageBounds = [[47.752727, 7.16758], [47.752727, 7.316758]];
-
-L.imageOverlay(overlay,imageBounds).addTo(map);
-L.imageOverlay(overlay,imageBounds).bringToFront();
-
-/*
-let littleton = L.marker([47.752727, 7.316758]).bindPopup('This is Littleton, CO.');
-let cities = L.layerGroup([littleton]);
-
-var grayscale = L.tileLayer(mapboxUrl, {id: 'mapid', tileSize: 512, zoomOffset: -1, attribution: mapboxAttribution}),
-    streets   = L.tileLayer(mapboxUrl, {id: 'mapid', tileSize: 512, zoomOffset: -1, attribution: mapboxAttribution});
-
-var map = L.map('mapid', {
-    center: [47.752727, 7.316758],
-    zoom: 10,
-    layers: [grayscale, cities]
-});
-
-
-var baseMaps = {
-    "Grayscale": grayscale,
-    "Streets": streets
-};
-
-var overlayMaps = {
-    "Cities": cities
-};
-
-L.control.layers(baseMaps, overlayMaps).addTo(map);
-
-
-var baseMaps = {
-    "<span style='color: gray'>Grayscale</span>": grayscale,
-    "Streets": streets
-};
-
-
-*/
